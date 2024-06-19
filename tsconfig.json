@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    //NOTE:
+    //re-build app when config new aliases path
+    //new aliases path inside here and babel.config.js
+    "paths": {
+      "@src/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@theme/*": ["src/theme/*"],
+      "@helper/*": ["src/helper/*"],
+      "@modules/*": ["src/modules/*"],
+      "@navigation/*": ["src/navigation/*"],
+      "@redux/*": ["src/redux/*"],
+      "@screen/*": ["src/screen/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "noEmit": true,
+    "resolveJsonModule": true
+  },
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
+}
